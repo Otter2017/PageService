@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: pageservice
+Implementation-Version: 17.10.16
+Built-By: OTTER
+Implementation-Vendor-Id: com.ai.crawler
+Build-Jdk: 1.8.0_141
+Implementation-URL: http://projects.spring.io/spring-boot/pageservice/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
