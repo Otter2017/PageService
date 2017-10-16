@@ -19,23 +19,23 @@ import com.ai.crawler.service.WebPageService;
 public class PageService {
 	@Autowired
 	WebPageService webPageService;
-	
-	@RequestMapping(value="/page",method=RequestMethod.GET)
-	WebPage getFetchPage(){
-		List<WebPage> pages=webPageService.getFetchList(1);
-		if(pages.size()>0){
+
+	@RequestMapping(value = "/page", method = RequestMethod.GET)
+	WebPage getFetchPage() {
+		List<WebPage> pages = webPageService.getFetchList(1);
+		if (pages.size() > 0) {
 			webPageService.updateFetchingTime(pages);
 		}
 		return pages.get(0);
 	}
-	
-	@RequestMapping(value="/page",method=RequestMethod.PUT)
-	boolean insertPage(@RequestBody WebPage newPage){
+
+	@RequestMapping(value = "/page", method = RequestMethod.PUT)
+	boolean insertPage(@RequestBody WebPage newPage) {
 		return webPageService.insert(newPage);
 	}
-	
-	@RequestMapping(value="/page",method=RequestMethod.POST)
-	boolean updatePage(@RequestBody WebPage newPage){
+
+	@RequestMapping(value = "/page", method = RequestMethod.POST)
+	boolean updatePage(@RequestBody WebPage newPage) {
 		return webPageService.update(newPage);
-	}	
+	}
 }
